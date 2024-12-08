@@ -13,7 +13,7 @@ import { Button } from "./ui/button";
 
 const Navbar = () => {
   return (
-    <header className="text-gray-600 body-font mb-10 border-b sticky top-0 bg-white z-10">
+    <header className="text-gray-600 body-font mb-10 border-b lg:sticky lg:top-0 bg-white z-10">
       <div className="container mx-auto flex flex-wrap p-5 flex-col lg:flex-row items-center max-lg:space-y-5">
         <Link
           href={"/home"}
