@@ -12,7 +12,7 @@ export default function Home() {
       <div
         className={`lg:w-3/4 lg:h-2/3 lg:bg-slate-800 lg:hadow-2xl lg:rounded-3xl lg:bg-opacity-10 flex justify-around items-center flex-col space-y-6 ${raleway.className} max-lg:p-2`}
       >
-        <h1 className="text-white text-5xl font-extrabold max-lg:text-4xl">
+        <h1 className="text-white text-5xl font-extrabold max-lg:text-4xl max-lg:text-center">
           Learn and buy at the same time!
         </h1>
         <p className="text-lg text-white">Enjoy learning while shopping.</p>
