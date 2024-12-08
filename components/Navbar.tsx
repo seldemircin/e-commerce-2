@@ -1,23 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
-import {
-  Heart,
-  Search,
-  ShoppingBag,
-  ShoppingBagIcon,
-  ShoppingBasket,
-  User,
-} from "lucide-react";
+import { Heart, Search, ShoppingBag, User } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { ModeToggle } from "./ModeToggle";
 import { NavigationMenuDemo } from "./NavigationMenuDemo";
 import { Button } from "./ui/button";
 
