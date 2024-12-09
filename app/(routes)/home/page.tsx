@@ -1,6 +1,10 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Raleway } from "next/font/google";
+import { SiMaterialformkdocs } from "react-icons/si";
 import "animate.css";
+import { useRouter } from "next/navigation";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -8,8 +12,10 @@ const raleway = Raleway({
 });
 
 export default function Home() {
+  const router = useRouter();
+
   return (
-    <div className="bg-gradient-to-br from-violet-300 to-violet-700  h-[90vh] flex justify-center items-center max-lg:p-4">
+    <div className="h-[90vh] flex justify-center items-center max-lg:p-4">
       <div
         className={`lg:w-3/4 lg:h-2/3 bg-slate-800 shadow-2xl rounded-3xl bg-opacity-10 flex justify-evenly items-center flex-col space-y-6 ${raleway.className} max-lg:p-10 h-3/4`}
       >
@@ -18,8 +24,24 @@ export default function Home() {
         </h1>
         <p className="text-lg text-white">Enjoy learning while shopping.</p>
         <div className="space-x-3">
-          <Button variant={"wfullButton"}>Start Shopping </Button>
-          <Button variant={"wfullButton"}> Docs </Button>
+          <Button
+            variant={"wfullButton"}
+            onClick={() => {
+              router.push("/products");
+            }}
+          >
+            {" "}
+            Start Shopping
+          </Button>
+          <Button
+            variant={"wfullButton"}
+            onClick={() => {
+              router.push("/docs");
+            }}
+          >
+            {" "}
+            Docs <SiMaterialformkdocs />{" "}
+          </Button>
         </div>
       </div>
     </div>

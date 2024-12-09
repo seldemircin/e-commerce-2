@@ -3,7 +3,7 @@ import React from "react";
 
 function page() {
   return (
-    <section className="text-gray-600 body-font relative">
+    <section className="text-gray-600 relative">
       <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap flex-col lg:flex-row">
         <div className="lg:w-2/3 w-full h-96 lg:h-auto bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
           <iframe
@@ -39,7 +39,7 @@ function page() {
             </div>
           </div>
         </div>
-        <div className="lg:w-1/3  bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+        <div className="lg:w-1/3  bg-white p-4 rounded-xl  flex flex-col md:ml-auto w-full md:py-8 mt-8 lg:mt-0">
           <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
             İletişim
           </h2>
@@ -49,7 +49,7 @@ function page() {
           </p>
           <div className="relative mb-4">
             <label htmlFor="name" className="leading-7 text-sm text-gray-600">
-              İsim
+              İsim <span className="font-bold">*</span>
             </label>
             <input
               type="text"
@@ -60,7 +60,7 @@ function page() {
           </div>
           <div className="relative mb-4">
             <label htmlFor="email" className="leading-7 text-sm text-gray-600">
-              Email
+              Email <span className="font-bold">*</span>
             </label>
             <input
               type="email"
@@ -74,7 +74,7 @@ function page() {
               htmlFor="message"
               className="leading-7 text-sm text-gray-600"
             >
-              Mesaj
+              Mesaj <span className="font-bold">*</span>
             </label>
             <textarea
               id="message"

@@ -17,7 +17,9 @@ export default function RootLayout({
     <html lang="en">
       <body className="flex flex-col min-h-screen">
         <Navbar />
-        <main className="grow">{children}</main>
+        <main className="grow bg-gradient-to-br from-violet-300 to-violet-700">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

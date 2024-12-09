@@ -49,9 +49,12 @@ const Navbar = () => {
             </SheetTrigger>
             <SheetContent>
               <SheetHeader>
-                <SheetTitle>Categories</SheetTitle>
-                <SheetDescription>
-                  <Link href={"/contact"}>Contact</Link>
+                <SheetDescription className="flex flex-col space-y-4">
+                  <div className="border-b flex flex-col space-y-4 pb-4">
+                    <Link href={"/docs"}>Docs</Link>
+                    <Link href={"/contact"}>Contact</Link>
+                  </div>
+                  <span className="font-semibold">Categories</span>
                 </SheetDescription>
               </SheetHeader>
             </SheetContent>
