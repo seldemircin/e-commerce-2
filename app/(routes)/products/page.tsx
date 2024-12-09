@@ -1,7 +1,6 @@
 import React from "react";
 
 interface ProductsPageProps {
-  params: {};
   searchParams: {
     query: string;
   };
