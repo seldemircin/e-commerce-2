@@ -1,4 +1,3 @@
-import Product from "@/components/Product";
 import React from "react";
 
 function DocsPage() {
