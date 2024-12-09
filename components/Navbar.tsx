@@ -31,11 +31,15 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
-      if (currentScrollY > lastScrollY) {
-        setIsVisible(false); // Scroll aşağı -> gizle
+      if (currentScrollY === 0) {
+        // En üste geldiyse her zaman göster
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY) {
+        // Scroll aşağı -> gizle
+        setIsVisible(false);
       } else {
-        setIsVisible(true); // Scroll yukarı -> göster
+        // Scroll yukarı -> göster
+        setIsVisible(true);
       }
 
       setLastScrollY(currentScrollY);
