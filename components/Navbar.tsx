@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Heart, Menu, Search, ShoppingBag, User } from "lucide-react";
@@ -18,8 +19,12 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
+  const [query, setQuery] = useState("");
+  const route = useRouter();
+
   return (
     <header className="text-gray-600 body-font border-b lg:sticky lg:top-0 bg-white z-10 max-lg:p-5">
       <div className="container mx-auto flex flex-wrap lg:p-5 flex-col lg:flex-row items-center max-lg:space-y-5">
@@ -66,11 +71,24 @@ const Navbar = () => {
         </nav>
 
         <div className="flex space-x-5 items-center lg:w-1/3 w-full">
-          <form className="relative grow">
+          <form
+            className="relative grow"
+            onSubmit={(e) => {
+              if (query.trim()) {
+                e.preventDefault();
+                route.push(`/products?query=${query}`);
+                setQuery("");
+              }
+            }}
+          >
             <Input
               type="text"
               className="border p-1 px-2 rounded-md placeholder:text-light placeholder:text-sm"
               placeholder="Search"
+              onChange={(e) => {
+                setQuery(e.target.value);
+              }}
+              value={query}
             />
             <Button
               variant={"link"}

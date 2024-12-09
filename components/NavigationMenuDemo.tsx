@@ -17,37 +17,37 @@ import {
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "Robot Kol Bileşeni",
-    href: "/workshop/components/robot-arm",
+    href: "/products/robot-arm",
     description:
       "Lazer kesimle üretilen hassas robot kol parçalarını monte etme ve test etme yöntemleri.",
   },
   {
     title: "Kontrol Kartı Kılavuzu",
-    href: "/workshop/components/control-board",
+    href: "/products/control-board",
     description:
       "Robotların ana kontrol sistemi için tasarlanmış devre kartlarının kurulumu ve test edilmesi.",
   },
   {
     title: "Şasi ve Gövde Tasarımı",
-    href: "/workshop/components/chassis-design",
+    href: "/products/chassis-design",
     description:
       "Lazer kesimle hazırlanan şasi parçalarının montajı ve dayanıklılık testleri.",
   },
   {
     title: "Sensör Entegrasyonu",
-    href: "/workshop/components/sensor-integration",
+    href: "/products/sensor-integration",
     description:
       "Robotik sensörlerin doğru şekilde bağlanması ve kalibrasyon süreçleri.",
   },
   {
     title: "Motor ve Aktüatör Montajı",
-    href: "/workshop/components/motor-actuator",
+    href: "/products/motor-actuator",
     description:
       "Lazer kesimle hazırlanan bileşenlere motor ve aktüatör entegrasyonu.",
   },
   {
     title: "Kablo ve Bağlantılar",
-    href: "/workshop/components/wiring-connections",
+    href: "/products/wiring-connections",
     description:
       "Robotlarda kullanılan kablo düzenleme ve bağlantı oluşturma teknikleri.",
   },

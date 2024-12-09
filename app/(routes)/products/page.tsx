@@ -1,7 +1,14 @@
 import React from "react";
 
-function ProductsPage() {
-  return <div>ProductsPage</div>;
+interface ProductsPageProps {
+  params: {};
+  searchParams: {
+    query: string;
+  };
+}
+
+function ProductsPage({ searchParams }: ProductsPageProps) {
+  return <div>{searchParams.query} Products Page</div>;
 }
 
 export default ProductsPage;
