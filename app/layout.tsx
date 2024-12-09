@@ -16,10 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        <main className="bg-gradient-to-br from-violet-300 to-violet-700 min-h-[90vh]">
-          {children}
-        </main>
+        <div className="bg-gradient-to-br from-violet-300 to-violet-700 ">
+          <Navbar />
+          <main className="min-h-[90vh]">{children}</main>
+        </div>
         <Footer />
       </body>
     </html>

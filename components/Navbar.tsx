@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Heart, Menu, Search, ShoppingBag, User } from "lucide-react";
@@ -23,10 +23,34 @@ import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const [query, setQuery] = useState("");
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const route = useRouter();
 
+  // Scroll davranışını yönetme
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY) {
+        setIsVisible(false); // Scroll aşağı -> gizle
+      } else {
+        setIsVisible(true); // Scroll yukarı -> göster
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   return (
-    <header className="text-gray-600 body-font border-b lg:sticky lg:top-0 bg-white z-10 max-lg:p-5">
+    <header
+      className={`text-gray-600 body-font border-b sticky top-0 bg-white z-10 max-lg:p-5 transition-transform duration-700 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="container mx-auto flex flex-wrap lg:p-5 flex-col lg:flex-row items-center max-lg:space-y-5">
         <div className="justify-between max-lg:w-full flex items-center">
           <Link

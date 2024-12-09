@@ -15,7 +15,7 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <div className="h-[90vh] flex justify-center items-center max-lg:p-4">
+    <div className="h-[90vh] flex justify-center items-center max-lg:px-4">
       <div
         className={`lg:w-3/4 lg:h-2/3 bg-slate-800 shadow-2xl rounded-3xl bg-opacity-10 flex justify-evenly items-center flex-col space-y-6 ${raleway.className} max-lg:p-10 h-3/4`}
       >
